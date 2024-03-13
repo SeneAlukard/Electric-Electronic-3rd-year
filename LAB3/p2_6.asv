@@ -1,0 +1,19 @@
+load('signals.mat');
+
+
+
+for i = 1:10
+    varName = sprintf('s%d', i);
+    currentValue = eval(varName);
+    subplot (5, 2, i)
+    plot(currentValue);
+end
+
+fs = 600;
+
+for i = 1:8
+    varName = sprintf('s%d', i);
+    currentSignal = eval(varName);
+    n = length(currentSignal)
+    fx = (-n/2 : n/2)
+end
