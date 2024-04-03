@@ -2,7 +2,8 @@ A = [2 3 0 0; 3 4 0 0;0 0 7 8; 0 0 8 9];
 Ainv = inv(A);
 %%
 x = 1:0.001:pi;
-%hold on
+
+%%hold on
 % plot(x,sin(x));
 % plot(x,3*sin(2*x));
 % plot(x,cos(x));
