@@ -14,14 +14,14 @@ subplot 312
 plot(fx, abs(fftshift(fft(y2))))
 subplot 313
 plot(fx, abs(fftshift(fft(z))))
-
-Q = conv(fft(y1), fft(y2));
+Y1 = fft(y1);
+Y2 = fft(y2);
+Q = conv(Y1(1:round(length(Y1)/4)), Y2(1:round(length(Y2)/4)))
 q = ifft([Q(1), Q(2:end)/2, fliplr(conj(Q(2:end)))/2]);
 
-t2 = -25:1/fs:175;
 p2 = figure
 subplot 211
-plot(t2,abs(q));
+plot(t(1:length(q)),abs(q));
 subplot 212
 plot(t,abs(z))
 p3 = figure
