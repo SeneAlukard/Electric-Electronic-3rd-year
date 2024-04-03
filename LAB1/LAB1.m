@@ -43,4 +43,5 @@ sln = rref([fx,fy]);
 syms l(x)
 
 l(x) = exp(x^2)*cos(2*x)*sin(x/2)
-k = inv(l(x));
+k = int(l(x));
+pretty(k);
