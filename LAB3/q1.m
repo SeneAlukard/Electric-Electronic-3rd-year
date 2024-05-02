@@ -11,4 +11,4 @@ ztrans(f);
 subplot 121
 fplot(f)
 subplot 122
-plot(x,y)
+stem(x,y)
