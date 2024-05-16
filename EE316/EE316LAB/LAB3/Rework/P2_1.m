@@ -9,12 +9,12 @@ X = fft(x);
 %4.Generate the zero-centered frequency domain for fs = 100 Hz.
 fs = 1e2;
 n = length(x);
-fz = (-n/2:n/2-1) * (fs/n);
+fz = (-n/2:n/2 - 1) * (fs/n);
 Xs = fftshift(X);
 XX = abs(Xs);
 %5.Plot the signal in the frequency domain.
 figure
-plot(fz, XX);
+plot(fz,XX);
 %6.Do the same for fs = 1 kHz, and plot it on the same figure
 hold on;
 fs = 2e2;

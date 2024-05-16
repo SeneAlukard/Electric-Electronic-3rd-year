@@ -54,7 +54,7 @@ plot(fz, abs(fftshift(fft(y2))));
 title 'y2 frequency domain'
 subplot 313
 plot(fz, abs(fftshift(fft(z))));
-title 'z frequency domain';
+title 'z frequency domain!';
 
 
 
