@@ -1,0 +1,30 @@
+% Time vector
+t = 0:0.05:10;
+
+% State-Space matrices
+A = [0 1 0; 0 0 1; -10 -17 -8];
+B = [2; 1; 0.5];
+C = [1 0 0];
+D = 0;
+
+% Create the state-space model
+sys = ss(A, B, C, D);
+
+% Define initial conditions
+x0 = [2 1 0.5];
+
+% Zero input (the size of B's second dimension tells how many inputs there are)
+u1 = 2*ones(length(t), size(B, 2));
+u2 = 0.5 * ones(length(t), size(B, 2));
+u3 = ones(length(t), size(B, 2));
+% Simulate the system's response to zero input with initial conditions
+[y1, t_out1, x] = lsim(sys, u, t, x0);
+[y2, t_out, x] = lsim(sys, u, t, x0);
+[y3, t_out, x] = lsim(sys, u, t, x0);
+
+% Plot the response
+plot(t_out, y)
+grid on;
+title('Response to Initial Conditions (No Input)')
+xlabel('t (sec)')
+ylabel('Output y')
