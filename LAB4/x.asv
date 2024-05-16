@@ -1,0 +1,7 @@
+M = 40;
+sig1 = hamming(M);
+sig2 = rectwin(M);
+sig3 = blackman(M);
+
+n = size(sig1);
+m = (-n/2:n/2) * 
